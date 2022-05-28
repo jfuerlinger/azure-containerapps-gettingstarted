@@ -37,7 +37,7 @@ jobs:
           push: true
           tags: crjfuerlinger.azurecr.io/my-container-app:${{ github.sha }}
           file: WeaterForecast/Dockerfile
-          context: ./WeaterForecast/
+          context: WeaterForecast/
 
 
   deploy:
