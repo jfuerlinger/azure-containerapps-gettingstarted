@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - 'WeatherForecast/**'
+    - '/WeatherForecast/**'
     - '.github/workflows/my-container-app-AutoDeployTrigger-93d2da80-57f7-4c6d-ad85-e1b230b065af.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: crjfuerlinger.azurecr.io/my-container-app:${{ github.sha }}
-          file: ./WeatherForecast/Dockerfile
-          context: ./WeatherForecast/
+          file: /WeatherForecast/Dockerfile
+          context: /WeatherForecast/
 
 
   deploy:
